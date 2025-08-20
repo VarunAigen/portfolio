@@ -1,0 +1,339 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Navigation */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    background-color: #212121;
+}
+.header-nav .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #FFD700;
+    cursor: pointer;
+}
+.header-nav .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+.header-nav .nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 400;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+.header-nav .nav-links a:hover,
+.header-nav .nav-links a.active {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Main Content Section */
+.main-content {
+    flex-grow: 1;
+}
+.content-section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #212121;
+    border-radius: 8px;
+    text-align: justify;
+}
+
+/* Home Page Specific */
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+.profile-text {
+    flex: 1;
+    max-width: 50%;
+}
+.profile-text .greeting {
+    color: #c0c0c0;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+.profile-text h1 {
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 700;
+}
+.profile-text .description,
+.profile-text p {
+    color: #c0c0c0;
+    max-width: 450px;
+    text-align: justify;
+}
+.line {
+    width: 100px;
+    height: 4px;
+    background-color: #FFD700;
+    margin: 1.5rem 0 2rem;
+    border-radius: 2px;
+    display: flex;
+}
+.profile-image-container {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    overflow: hidden;
+    background: #382f2f;
+    box-shadow: 0 0px 45px #f1f100;
+}
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    background: #382f2f;
+}
+
+/* Buttons & Social */
+.profile-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+.btn-primary, .btn-secondary {
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary {
+    background-color: #FFD700;
+    color: #212121;
+}
+.btn-primary:hover {
+    background-color: #e0b800;
+    color: #212121;
+}
+.btn-secondary {
+    background-color: #FFD700;
+    color: #212121;
+}
+.btn-secondary:hover {
+    background-color: #e0b800;
+    color: #212121;
+}
+.social-icons {
+    margin: 1.5rem 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s;
+    filter: grayscale(100%) brightness(120%);
+}
+.social-icons a:hover img {
+    transform: scale(1.15);
+    filter: none;
+}
+
+/* About Page Specific */
+.content-section h2 {
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 0.5rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+.skill-card {
+    background: linear-gradient(160deg, #232323 70%, #FFD700 100%);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    box-shadow: 0 2px 16px rgba(255, 215, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+.skill-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 4px 24px #FFD70033;
+}
+.skill-card h3 {
+    color: #ffd900;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+.skill-card ul {
+    list-style: disc inside;
+    color: #c0c0c0;
+    margin: 0;
+    padding-left: 0.5rem;
+}
+.skill-card ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Projects Page Specific */
+.projects-grid-alt {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 2rem 0;
+}
+.project-row {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(165deg, #232323 70%, #FFD700 100%);
+    border-radius: 12px;
+    box-shadow: 0 2px 16px #ffd9003e;
+    padding: 2rem 1.5rem;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.project-img {
+    flex: 1 1 320px;
+    max-width: 340px;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.project-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px #FFD70022;
+}
+.project-info {
+    flex: 2 1 400px;
+    min-width: 220px;
+}
+.project-info h2 {
+    color: #FFD700;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+.project-info p {
+    color: #c0c0c0;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+.project-link {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+.project-link:hover {
+    color: #e0b800;
+    text-decoration: underline;
+}
+
+/* Extracurricular Gallery */
+.extracurricular-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+.event-card {
+    background: #232323;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px #FFD70022;
+    overflow: hidden;
+    width: 100%;
+    max-width: 420px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.event-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid #f7df05;
+}
+.event-caption {
+    padding: 1.2rem;
+    color: #e8e8e8;
+    font-size: 1.08rem;
+    text-align: center;
+    background: #212121;
+    width: 100%;
+}
+.event-card:hover {
+    transform: scale(1.05) translateY(-6px);
+    box-shadow: 0 8px 32px #FFD70044;
+}
+
+/* Footer Logos */
+.footer-logos {
+    background-color: #212121;
+    padding: 2rem 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: auto;
+}
+.footer-logos img {
+    height: 40px;
+    filter: grayscale(100%) brightness(150%);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    .project-row {
+        flex-direction: column;
+        padding: 1.2rem 0.5rem;
+        gap: 1.2rem;
+    }
+    .project-img, .project-info {
+        max-width: 100%;
+        min-width: 0;
+    }
+    .extracurricular-gallery {
+        grid-template-columns: 1fr;
+    }
+    .content-section {
+        padding: 1rem;
+    }
+}
+
