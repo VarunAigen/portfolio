@@ -5,52 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Varun S - Contact</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            color: #222;
+        }
+        .header-nav {
+            background-color: #fffbe6;
+        }
+        .content-section {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #ffd90022;
+            margin-top: 2rem;
+            padding: 2rem;
+        }
+        .line {
+            background-color: #FFD700;
+            height: 4px;
+            border-radius: 2px;
+            margin: 1rem 0;
+        }
+        .contact-form-container {
+            background: #fffbe6;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px #ffd90022;
+            padding: 2rem;
+            max-width: 500px;
+            margin: 2rem auto;
+        }
+        .form-group label {
+            color: #222;
+            font-weight: 500;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.7rem;
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #FFD700;
+            border-radius: 4px;
+            background: #fff;
+            color: #222;
+            font-size: 1rem;
+        }
+        .submit-btn {
+            background: #FFD700;
+            color: #222;
+            border: none;
+            padding: 0.7rem 2rem;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background: #ffe066;
+        }
+        footer {
+            background: #fffbe6;
+            color: #222;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .footer-logos img {
+            margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
 
-    <header class="header-nav">
-        <div class="logo">Portfolio</div>
+    <header class="header-nav" style="border-bottom: 2px solid #FFD700;">
+        <div class="logo" style="color: #FFD700;">Portfolio</div>
         <nav class="nav-links">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="about.html" class="nav-link">About</a>
-            <a href="projects.html" class="nav-link">Projects</a>
-            <a href="contact.html" class="nav-link active">Contact</a>
+            <a href="index.html" class="nav-link" style="color: #222;">Home</a>
+            <a href="about.html" class="nav-link" style="color: #222;">About</a>
+            <a href="projects.html" class="nav-link" style="color: #222;">Projects</a>
+            <a href="contact.html" class="nav-link active" style="color: #222;">Contact</a>
         </nav>
     </header>
 
     <main class="main-content">
-        <section class="content-section">
-            <h1>Contact Me</h1>
+        <section class="content-section" style="margin-top:2rem;">
+            <h1 style="color:#FFD700;">Contact Me</h1>
             <div class="line"></div>
-            <div class="contact-form-container">
+            <div class="contact-form-container" style="background:#fffbe6;">
                 <form action="#" method="post">
                     <div class="form-group">
                         <label for="name">Name:</label>
-                        <input type="text" id="name" name="user_name" placeholder="Enter your full name" required>
+                        <input type="text" id="name" name="user_name" placeholder="Enter your full name" required style="border:1px solid #FFD700;">
                     </div>
                     <div class="form-group">
                         <label for="contact">Contact Number:</label>
-                        <input type="tel" id="contact" name="user_contact" placeholder="e.g., 123-456-7890">
+                        <input type="tel" id="contact" name="user_contact" placeholder="e.g., 123-456-7890" style="border:1px solid #FFD700;">
                     </div>
                     <div class="form-group">
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="user_email" placeholder="you@example.com" required>
+                        <input type="email" id="email" name="user_email" placeholder="you@example.com" required style="border:1px solid #FFD700;">
                     </div>
                     <div class="form-group">
                         <label for="message">Message:</label>
-                        <textarea id="message" name="user_message" rows="5" placeholder="Your message here..." required></textarea>
+                        <textarea id="message" name="user_message" rows="5" placeholder="Your message here..." required style="border:1px solid #FFD700;"></textarea>
                     </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
+                    <button type="submit" class="submit-btn" style="background:#FFD700; color:#222;">Send Message</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer class="footer-logos">
-        <img src="https://via.placeholder.com/100x40/555555?text=Meta" alt="Meta">
-        <img src="https://via.placeholder.com/100x40/555555?text=Google" alt="Google">
-        <img src="https://via.placeholder.com/100x40/555555?text=LinkedIn" alt="LinkedIn">
-        <img src="https://via.placeholder.com/100x40/555555?text=Slack" alt="Slack">
+    <footer style="background:#fffbe6; color:#222; text-align:center; padding:1.5rem 0; border-top:2px solid #FFD700;">
+        <div style="font-size:1rem;">
+            &copy; 2025 Varun S | Designed with passion<span style="color:#FFD700;">&#9733;</span>
+        </div>
     </footer>
 
 </body>
