@@ -1,124 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Varun S - Contact</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-color: #1a1a1a;
-            color: #222;
-        }
-        .header-nav {
-            background-color: #fffbe6;
-        }
-        .content-section {
-            background: #140e00;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px #ffd90022;
-            margin-top: 2rem;
-            padding: 2rem;
-        }
-        .line {
-            background-color: #FFD700;
-            height: 4px;
-            border-radius: 2px;
-            margin: 1rem 0;
-        }
-        .contact-form-container {
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px #ffd90022;
-            padding: 2rem;
-            max-width: 500px;
-            margin: 2rem auto;
-        }
-        .form-group label {
-            color: #222;
-            font-weight: 500;
-        }
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.7rem;
-            margin-top: 0.5rem;
-            margin-bottom: 1rem;
-            border: 1px solid #FFD700;
-            border-radius: 4px;
-            background: #fff;
-            color: #222;
-            font-size: 1rem;
-        }
-        .submit-btn {
-            background: #FFD700;
-            color: #222;
-            border: none;
-            padding: 0.7rem 2rem;
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .submit-btn:hover {
-            background: #ffe066;
-        }
-        footer {
-            background: #fffbe6;
-            color: #222;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        .footer-logos img {
-            margin: 0 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Varun S - Contact</title>
+
+  <style>
+    :root{
+      --gold:#FFD700;
+      --dark:#0f0f0f;
+      --light:#fffbe6;
+      --text:#222;
+      --white:#ffffff;
+    }
+
+    *{
+      box-sizing:border-box;
+      padding:0;
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:var(--dark);
+      color:var(--white);
+      line-height:1.5;
+    }
+
+    /* HEADER */
+    header{
+      background:var(--light);
+      border-bottom:3px solid var(--gold);
+      padding:1rem 2rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:1.5rem;
+      font-weight:800;
+      color:var(--gold);
+      letter-spacing:1px;
+    }
+
+    nav a{
+      margin-left:1.2rem;
+      text-decoration:none;
+      color:var(--text);
+      font-weight:600;
+    }
+
+    nav a.active,
+    nav a:hover{
+      color:var(--gold);
+    }
+
+    /* MAIN SECTION */
+    .content-section{
+      max-width:900px;
+      margin:2rem auto;
+      background:#140e00;
+      border-radius:16px;
+      padding:2rem;
+      box-shadow:0 2px 15px #ffd90033;
+    }
+
+    h1{
+      color:var(--gold);
+      text-align:center;
+    }
+
+    .line{
+      width:80px;
+      height:4px;
+      background:var(--gold);
+      margin:0.7rem auto 1.5rem auto;
+      border-radius:3px;
+    }
+
+    /* CONTACT FORM CARD */
+    .contact-form-container{
+      background:var(--light);
+      border-radius:10px;
+      padding:2rem;
+      max-width:520px;
+      margin:auto;
+      box-shadow:0 2px 15px #ffd90022;
+    }
+
+    .form-group{
+      margin-bottom:1rem;
+    }
+
+    label{
+      display:block;
+      color:var(--text);
+      font-weight:600;
+      margin-bottom:0.3rem;
+    }
+
+    input, textarea{
+      width:100%;
+      padding:.7rem;
+      border-radius:6px;
+      border:1.5px solid var(--gold);
+      font-size:1rem;
+      outline:none;
+    }
+
+    input:focus,
+    textarea:focus{
+      box-shadow:0 0 0 2px #ffd90055;
+    }
+
+    .submit-btn{
+      width:100%;
+      background:var(--gold);
+      border:none;
+      padding:.8rem;
+      border-radius:8px;
+      cursor:pointer;
+      font-weight:800;
+      color:var(--text);
+      transition:transform .2s, opacity .2s;
+    }
+
+    .submit-btn:hover{
+      transform:translateY(-1px);
+      opacity:.9;
+    }
+
+    footer{
+      margin-top:2rem;
+      background:var(--light);
+      border-top:2px solid var(--gold);
+      text-align:center;
+      padding:1rem 0;
+      color:var(--text);
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:600px){
+      header{
+        flex-direction:column;
+        gap:.7rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <header class="header-nav" style="border-bottom: 2px solid #FFD700;">
-        <div class="logo" style="color: #FFD700;">Portfolio</div>
-        <nav class="nav-links">
-            <a href="index.html" class="nav-link" style="color: #222;">Home</a>
-            <a href="about.html" class="nav-link" style="color: #222;">About</a>
-            <a href="projects.html" class="nav-link" style="color: #222;">Projects</a>
-            <a href="contact.html" class="nav-link active" style="color: #222;">Contact</a>
-        </nav>
-    </header>
+<header>
+  <div class="logo">Portfolio</div>
 
-    <main class="main-content">
-        <section class="content-section" style="margin-top:2rem;">
-            <h1 style="color:#FFD700;">Contact Me</h1>
-            <div class="line"></div>
-            <div class="contact-form-container" style="background:#fffbe6;">
-                <form action="#" method="post">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="user_name" placeholder="Enter your full name" required style="border:1px solid #FFD700;">
-                    </div>
-                    <div class="form-group">
-                        <label for="contact">Contact Number:</label>
-                        <input type="tel" id="contact" name="user_contact" placeholder="e.g., 123-456-7890" style="border:1px solid #FFD700;">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="user_email" placeholder="you@example.com" required style="border:1px solid #FFD700;">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="user_message" rows="5" placeholder="Your message here..." required style="border:1px solid #FFD700;"></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn" style="background:#FFD700; color:#222;">Send Message</button>
-                </form>
-            </div>
-        </section>
-    </main>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
 
-    <footer style="background:#fffbe6; color:#222; text-align:center; padding:1.5rem 0; border-top:2px solid #FFD700;">
-        <div style="font-size:1rem;">
-            &copy; 2025 Varun S | Designed with passion<span style="color:#FFD700;">&#9733;</span>
+<main>
+  <section class="content-section">
+    <h1>Contact Me</h1>
+    <div class="line"></div>
+
+    <div class="contact-form-container">
+
+      <form id="contactForm" method="post" novalidate>
+        
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input id="name" name="name" type="text" placeholder="Enter your name" required minlength="2">
         </div>
-    </footer>
+
+        <div class="form-group">
+          <label for="contact">Contact Number</label>
+          <input id="contact" name="contact" type="tel" placeholder="98765 43210" pattern="[0-9]{10}">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  © 2025 Varun S | Designed with passion ★
+</footer>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function(e){
+    if(!this.checkValidity()){
+      e.preventDefault();
+      alert("Please fill all required fields correctly.");
+    }
+  });
+</script>
 
 </body>
 </html>
